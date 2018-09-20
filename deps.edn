@@ -1,0 +1,13 @@
+{:deps {cheshire        {:mvn/version "5.8.0"}
+        io.forward/yaml {:mvn/version "1.0.9"}
+        clojure-ini     {:mvn/version "0.0.2"}
+        toml            {:mvn/version "0.1.3"}}
+
+ :paths ["src"]
+
+ :aliases {:native-image
+           {:extra-deps
+            {luchiniatwork/cambada {:mvn/version "1.0.0"}}
+            :main-opts ["-m" "cambada.native-image"
+                        "-O" "H:ReflectionConfigurationFiles=./reflections.json"
+                        "-m" "chaw.core"]}}}

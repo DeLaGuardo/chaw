@@ -1,0 +1,49 @@
+[
+    {
+        "name" : "org.yaml.snakeyaml.Yaml",
+        "allDeclaredConstructors" : true,
+        "allPublicConstructors" : true,
+        "allDeclaredMethods" : true,
+        "allPublicMethods" : true
+    },
+    {
+        "name": "com.sun.org.apache.xerces.internal.jaxp.SAXParserFactoryImpl",
+        "allDeclaredConstructors" : true,
+        "allPublicConstructors" : true,
+        "allDeclaredMethods" : true,
+        "allPublicMethods" : true
+    },
+    {
+        "name": "com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl",
+        "allDeclaredConstructors" : true,
+        "allPublicConstructors" : true,
+        "allDeclaredMethods" : true,
+        "allPublicMethods" : true
+    },
+    {
+        "name" : "java.lang.String",
+        "methods" : [
+            { "name" : "getBytes" },
+            { "name": "indexOf" }
+        ]
+    },
+    {
+        "name": "java.lang.Character",
+        "methods": [
+            { "name": "isWhitespace" }
+        ]
+    },
+    {
+        "name": "com.moandjiezana.toml.Toml",
+        "methods": [
+            { "name": "read", "parameterTypes" : ["java.lang.String"] },
+            { "name": "toMap" }
+        ]
+    },
+    {
+        "name": "java.util.HashMap",
+        "methods": [
+            { "name": "keySet" }
+        ]
+    }
+]
