@@ -1,7 +1,6 @@
 # Created by https://www.gitignore.io/api/clojure
 
 ### Clojure ###
-pom.xml
 pom.xml.asc
 *.jar
 *.class
