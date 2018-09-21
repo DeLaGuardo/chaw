@@ -20,6 +20,12 @@
                 (str s "\n"))
               (line-seq (java.io.BufferedReader. *in*)))))
 
+(defn read-file [file-name]
+  (try
+    (slurp file-name)
+    (catch Throwable _
+      nil)))
+
 (defn parse-yaml [yaml-string]
   (try
     (let [r (yaml/parse-string yaml-string)]
@@ -54,7 +60,8 @@
 
 (defn -main [& args]
   (System/setProperty "java.runtime.name" "Java(TM) SE GraalVM Runtime Environment")
-  (let [input-str (read-input)]
+  (let [input-str (or (read-file (first args))
+                      (read-input))]
     (write-output
      (first
       (filter identity

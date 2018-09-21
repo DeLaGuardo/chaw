@@ -10,4 +10,5 @@
             {luchiniatwork/cambada {:mvn/version "1.0.0"}}
             :main-opts ["-m" "cambada.native-image"
                         "-O" "H:ReflectionConfigurationFiles=./reflections.json"
+                        "-O" "H:IncludeResourceBundles=com.sun.org.apache.xerces.internal.impl.msg.XMLMessages"
                         "-m" "chaw.core"]}}}
