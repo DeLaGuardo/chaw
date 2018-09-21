@@ -58,6 +58,12 @@
     (catch Throwable _
       nil)))
 
+(defn parse-edn [edn-string]
+  (try
+    (clojure.edn/read-string edn-string)
+    (catch Throwable _
+      nil)))
+
 (defn -main [& args]
   (System/setProperty "java.runtime.name" "Java(TM) SE GraalVM Runtime Environment")
   (let [input-str (or (read-file (first args))
@@ -70,5 +76,6 @@
                      parse-yaml
                      parse-json
                      parse-ini
-                     parse-toml]))))
+                     parse-toml
+                     parse-edn]))))
     (System/exit 0)))
